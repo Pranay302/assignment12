@@ -15,12 +15,12 @@ class ProductTable extends Component {
 
 	render() {
 		const products = Object.keys(this.props.products);
-		let rows = [];
-		let { filterText } = this.props;
+		var rows = [];
+		var { filterText } = this.props;
 
-		for (let i = 0; i < products.length; i++) {
-			const p = products[i]; 
-			const prod = this.props.products[p];
+		for (var j = 0; j < products.length; j++) {
+			const pr = products[j]; 
+			const prod = this.props.products[pr];
 			const name = prod.name.toLowerCase();
 
 			if(filterText && filterText.length > 0 && name.indexOf(filterText) === -1) continue;
